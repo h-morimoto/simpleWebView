@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JCx-SD-aUc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="simpleWebView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,6 +22,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Cdc-Gl-raC">
+            <objects>
+                <viewController id="JCx-SD-aUc" customClass="WebViewController" customModule="simpleWebView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wYu-uc-cCB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Whr-NW-hLM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TJL-Oi-OB1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEH-55-mZ7">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="prev" id="LTA-AF-aOD">
+                                        <connections>
+                                            <action selector="prevBtn:" destination="JCx-SD-aUc" id="PRd-zO-9Bf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Mol-Ug-dnE"/>
+                                    <barButtonItem title="reload" id="bsT-eK-RlO">
+                                        <connections>
+                                            <action selector="reloadBtn:" destination="JCx-SD-aUc" id="Osc-UJ-C8O"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ism-aV-2OT"/>
+                                    <barButtonItem title="next" id="sXW-uM-1cd">
+                                        <connections>
+                                            <action selector="nextBtn:" destination="JCx-SD-aUc" id="RDI-Oy-6oe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUA-2w-9il">
+                                <rect key="frame" x="4" y="0.0" width="592" height="556"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HUA-2w-9il" firstAttribute="leading" secondItem="TJL-Oi-OB1" secondAttribute="leadingMargin" constant="-16" id="9mL-9q-Wqg"/>
+                            <constraint firstItem="KEH-55-mZ7" firstAttribute="top" secondItem="HUA-2w-9il" secondAttribute="bottom" id="LVp-Ie-Vtw"/>
+                            <constraint firstItem="Whr-NW-hLM" firstAttribute="top" secondItem="KEH-55-mZ7" secondAttribute="bottom" id="QLl-Ia-PKR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HUA-2w-9il" secondAttribute="trailing" constant="-16" id="SDx-lU-RjG"/>
+                            <constraint firstItem="KEH-55-mZ7" firstAttribute="leading" secondItem="TJL-Oi-OB1" secondAttribute="leadingMargin" constant="-20" id="TVu-4s-YQT"/>
+                            <constraint firstItem="HUA-2w-9il" firstAttribute="top" secondItem="wYu-uc-cCB" secondAttribute="bottom" constant="-20" id="f1j-UY-74Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KEH-55-mZ7" secondAttribute="trailing" constant="-20" id="r4s-5B-ZTv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="HUA-2w-9il" id="ZNu-CU-cEc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xaa-if-ZmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365" y="1036"/>
         </scene>
     </scenes>
 </document>

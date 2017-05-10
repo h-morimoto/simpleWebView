@@ -14,6 +14,7 @@
 		621EB19E1EB1F89000D41FE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 621EB19C1EB1F89000D41FE0 /* LaunchScreen.storyboard */; };
 		621EB1A91EB1F89000D41FE0 /* simpleWebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621EB1A81EB1F89000D41FE0 /* simpleWebViewTests.swift */; };
 		621EB1B41EB1F89000D41FE0 /* simpleWebViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621EB1B31EB1F89000D41FE0 /* simpleWebViewUITests.swift */; };
+		621EB1C21EB1FC0900D41FE0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621EB1C11EB1FC0900D41FE0 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		621EB1AF1EB1F89000D41FE0 /* simpleWebViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleWebViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		621EB1B31EB1F89000D41FE0 /* simpleWebViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleWebViewUITests.swift; sourceTree = "<group>"; };
 		621EB1B51EB1F89000D41FE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		621EB1C11EB1FC0900D41FE0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				621EB19A1EB1F89000D41FE0 /* Assets.xcassets */,
 				621EB19C1EB1F89000D41FE0 /* LaunchScreen.storyboard */,
 				621EB19F1EB1F89000D41FE0 /* Info.plist */,
+				621EB1C11EB1FC0900D41FE0 /* WebViewController.swift */,
 			);
 			path = simpleWebView;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					621EB18F1EB1F89000D41FE0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P642LRV7X4;
 					};
 					621EB1A31EB1F89000D41FE0 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -257,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				621EB1961EB1F89000D41FE0 /* ViewController.swift in Sources */,
+				621EB1C21EB1FC0900D41FE0 /* WebViewController.swift in Sources */,
 				621EB1941EB1F89000D41FE0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,10 +404,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = simpleWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lodeo.simpleWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +419,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = simpleWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lodeo.simpleWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -482,6 +495,7 @@
 				621EB1BA1EB1F89000D41FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		621EB1BB1EB1F89000D41FE0 /* Build configuration list for PBXNativeTarget "simpleWebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +504,7 @@
 				621EB1BD1EB1F89000D41FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		621EB1BE1EB1F89000D41FE0 /* Build configuration list for PBXNativeTarget "simpleWebViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +513,7 @@
 				621EB1C01EB1F89000D41FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
